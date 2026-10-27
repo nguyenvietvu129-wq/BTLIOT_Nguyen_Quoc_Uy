@@ -1,0 +1,316 @@
+<!-- frontend/profile.html -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - IoT Monitoring</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/auth.js"></script>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+
+        <div class="logo">IoT PTIT</div>
+        <div class="logo-sub">SMART ENVIRONMENT</div>
+
+        <a href="dashboard.html" class="nav-item">
+            <span class="icon">📊</span>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="data-sensor.html" class="nav-item">
+            <span class="icon">📈</span>
+            <span>Data Sensor</span>
+        </a>
+
+        <a href="active-history.html" class="nav-item">
+            <span class="icon">📋</span>
+            <span>Active History</span>
+        </a>
+
+        <a href="profile.html" class="nav-item active">
+            <span class="icon">👤</span>
+            <span>Profile</span>
+        </a>
+
+        <a href="javascript:void(0)"
+           onclick="logout()"
+           class="nav-item"
+           style="color: #ff4d4d;">
+
+            <span class="icon">🚪</span>
+            <span>Đăng xuất</span>
+
+        </a>
+
+        <div class="footer-text">
+            IoT Monitoring System • PTIT • 2026
+        </div>
+
+    </nav>
+
+
+    <div class="main-content">
+
+        <h1 class="page-title">Profile</h1>
+
+        <p class="page-subtitle">
+            Project member & resource links
+        </p>
+
+
+        <div class="profile-grid">
+
+
+            <!-- ================= PROFILE INFORMATION ================= -->
+
+            <div class="card profile-card">
+
+                <!-- Avatar + Name -->
+                <div class="profile-header">
+
+                    <img
+                        src="images/1791354231172_2275150041754807224_6407271235345421761_273219d71aebd49bdc5df5409e1d3c3e.jpg"
+                        alt="Nguyễn Viết Vũ"
+                        class="profile-avatar"
+                    >
+
+                    <div class="profile-name">
+                        <h3>Nguyễn Viết Vũ</h3>
+                        <p>IoT Monitoring Project</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Information -->
+
+                <div class="profile-info">
+
+                    <div class="info-item">
+
+                        <div class="label">
+                            DATE OF BIRTH
+                        </div>
+
+                        <div class="value">
+                            24/03/2005
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="label">
+                            PHONE
+                        </div>
+
+                        <div class="value">
+                            0363149916
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="label">
+                            EMAIL
+                        </div>
+
+                        <div class="value">
+                            nguyenvietvu129@gmail.com
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <div class="label">
+                            GITHUB
+                        </div>
+
+                        <div class="value">
+
+                            <a
+                                href="https://github.com/nguyenvietvu129-wq"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                github.com/nguyenvietvu129-wq
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PROJECT RESOURCES ================= -->
+
+            <div class="card">
+
+                <h3 class="card-title">
+                    📁 Project Resources
+                </h3>
+
+
+                <!-- GitHub -->
+
+                <a
+                    href="https://github.com/nguyenvietvu129-wq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="resource-link"
+                >
+
+                    <div>
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                        <div class="resource-description">
+                            Source code repository
+                        </div>
+
+                    </div>
+
+                    <span class="resource-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Figma -->
+
+                <a
+                    href="https://www.figma.com/design/d9T4g9i6DEVpP5ukjvsSSd/BTLIOT?node-id=3-179&p=f&t=7sS8gCDRdcQkdrdg-0"
+                    class="resource-link"
+                >
+
+                    <div>
+
+                        <strong>
+                            Figma
+                        </strong>
+
+                        <div class="resource-description">
+                            UI / UX design
+                        </div>
+
+                    </div>
+
+                    <span class="resource-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Postman -->
+
+                <a
+                    href="https://www.postman.com/nguyenvietvu129-2391852/btliot/collection/te0tbha/new-collection?sideView=agentMode"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="resource-link"
+                >
+
+                    <div>
+
+                        <strong>
+                            Postman
+                        </strong>
+
+                        <div class="resource-description">
+                            API workspace
+                        </div>
+
+                    </div>
+
+                    <span class="resource-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Project PDF -->
+
+                <a
+                    href="#"
+                    class="resource-link"
+                >
+
+                    <div>
+
+                        <strong>
+                            Project PDF
+                        </strong>
+
+                        <div class="resource-description">
+                            Documentation
+                        </div>
+
+                    </div>
+
+                    <span class="resource-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- System Status -->
+
+                <h4 class="system-status-title">
+                    SYSTEM STATUS
+                </h4>
+
+
+                <div class="system-status">
+
+                    <div class="status-item">
+
+                        <span class="status-dot status-online"></span>
+
+                        <span>
+                            MQTT Online
+                        </span>
+
+                    </div>
+
+
+                    <div class="status-item">
+
+                        <span class="status-dot status-online"></span>
+
+                        <span>
+                            API Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

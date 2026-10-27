@@ -1,0 +1,34 @@
+<!-- frontend/login.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - IoT Monitoring</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-page">
+    <div class="login-card">
+        <div class="login-title">IoT PTIT</div>
+        <div class="login-subtitle">ĐĂNG NHẬP HỆ THỐNG GIÁM SÁT</div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Tên đăng nhập (Username)</label>
+                <input type="text" id="username" name="username" placeholder="Nhập username..." required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu (Password)</label>
+                <input type="password" id="password" name="password" placeholder="Nhập password..." required autocomplete="current-password">
+            </div>
+
+            <button type="submit" class="btn-login">Đăng nhập</button>
+        </form>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

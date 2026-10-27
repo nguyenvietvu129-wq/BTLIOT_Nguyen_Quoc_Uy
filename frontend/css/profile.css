@@ -1,0 +1,209 @@
+@import url("base.css");
+/* profile link colors now handled in base.css dark theme */
+/* ================= PROFILE ================= */
+
+.profile-card {
+    padding: 28px;
+}
+
+
+/* Avatar + tên */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+
+/* Ảnh đại diện hình tròn */
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid #ffffff;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+
+    flex-shrink: 0;
+}
+
+
+/* Tên */
+
+.profile-name h3 {
+    margin: 0 0 8px 0;
+
+    font-size: 25px;
+
+    color: #172b4d;
+}
+
+
+.profile-name p {
+    margin: 0;
+
+    color: #7a8b9f;
+
+    font-size: 14px;
+}
+
+
+/* Thông tin */
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.label {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.8px;
+
+    color: #7a8b9f;
+}
+
+
+.value {
+    font-size: 16px;
+
+    color: #172b4d;
+}
+
+
+.value a {
+    color: #008cff;
+
+    text-decoration: none;
+}
+
+
+.value a:hover {
+    text-decoration: underline;
+}
+
+
+/* Project Resources */
+
+.card-title {
+    margin-top: 0;
+
+    margin-bottom: 16px;
+}
+
+
+.resource-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #e8edf3;
+
+    text-decoration: none;
+
+    color: #172b4d;
+}
+
+
+.resource-link strong {
+    font-size: 16px;
+}
+
+
+.resource-description {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: #7a8b9f;
+}
+
+
+.resource-arrow {
+    color: #00bfe8;
+
+    font-size: 24px;
+}
+
+
+.resource-link:hover strong {
+    color: #00a9d6;
+}
+
+
+/* System Status */
+
+.system-status-title {
+    margin-top: 24px;
+
+    margin-bottom: 14px;
+
+    color: #7a8b9f;
+
+    font-size: 13px;
+
+    letter-spacing: 0.7px;
+}
+
+
+.system-status {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.status-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #172b4d;
+
+    font-size: 14px;
+}
+
+
+.status-dot {
+    width: 10px;
+
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+
+.status-online {
+    background: #18c76f;
+
+    box-shadow: 0 0 8px rgba(24, 199, 111, 0.5);
+}

@@ -1,0 +1,15 @@
+# Maven target directory
+backend/target/
+backend/.m2/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS junk
+.DS_Store
+Thumbs.db

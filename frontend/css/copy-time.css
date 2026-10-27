@@ -1,0 +1,31 @@
+.time-cell-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.copy-time-button {
+    padding: 4px 8px;
+    border: 1px solid #7a8b9f;
+    border-radius: 5px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.copy-time-button:hover:not(:disabled) {
+    background: rgba(122, 139, 159, 0.15);
+}
+
+.copy-time-button:focus-visible {
+    outline: 2px solid #58a6ff;
+    outline-offset: 2px;
+}
+
+.copy-time-button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

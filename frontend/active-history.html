@@ -1,0 +1,122 @@
+<!-- frontend/active-history.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active History - IoT Monitoring</title>
+    <link rel="stylesheet" href="css/active-history.css">
+    <link rel="stylesheet" href="css/copy-time.css">
+    <script src="js/auth.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">IoT PTIT</div>
+        <div class="logo-sub">SMART ENVIRONMENT</div>
+        <a href="dashboard.html" class="nav-item">
+            <span class="icon">📊</span>
+            <span>Dashboard</span>
+        </a>
+        <a href="data-sensor.html" class="nav-item">
+            <span class="icon">📈</span>
+            <span>Data Sensor</span>
+        </a>
+        <a href="active-history.html" class="nav-item active">
+            <span class="icon">📋</span>
+            <span>Active History</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="icon">👤</span>
+            <span>Profile</span>
+        </a>
+        <a href="javascript:void(0)" onclick="logout()" class="nav-item" style="color: #ff4d4d;">
+            <span class="icon">🚪</span>
+            <span>Đăng xuất</span>
+        </a>
+        <div class="footer-text">IoT Monitoring System • PTIT • 2026</div>
+    </nav>
+
+    <div class="main-content">
+        <h1 class="page-title">Active History</h1>
+        <p class="page-subtitle">Lịch sử điều khiển thiết bị • Tìm kiếm • Phân trang</p>
+
+        <!-- Khu vực tìm kiếm -->
+        <div class="search-section">
+            <div class="search-fields">
+                <div class="search-field-group">
+                    <label for="searchDeviceName">Tên thiết bị</label>
+                    <select id="searchDeviceName">
+                        <option value="">Tất cả thiết bị</option>
+                        <option value="LED XANH">LED XANH</option>
+                        <option value="LED ĐỎ">LED ĐỎ</option>
+                        <option value="LED VÀNG">LED VÀNG</option>
+                    </select>
+                </div>
+                <div class="search-field-group">
+                    <label for="searchAction">Hành động</label>
+                    <select id="searchAction">
+                        <option value="">Tất cả</option>
+                        <option value="ON">ON</option>
+                        <option value="OFF">OFF</option>
+                    </select>
+                </div>
+                <div class="search-field-group">
+                    <label for="searchStatus">Trạng thái</label>
+                    <select id="searchStatus">
+                        <option value="">Tất cả</option>
+                        <option value="LOADING">LOADING</option>
+                        <option value="SUCCESS">SUCCESS</option>
+                        <option value="FAILURE">FAILURE</option>
+                    </select>
+                </div>
+                <div class="search-field-group">
+                    <label for="searchExecutedAt">Thời gian thực hiện</label>
+                    <input type="text" id="searchExecutedAt" placeholder="Ví dụ: 2026-09-08 hoặc 08:00">
+                </div>
+            </div>
+            <div class="search-actions">
+                <button class="btn-search" onclick="doSearch()">🔍 Tìm kiếm</button>
+                <button class="btn-reset" onclick="resetSearch()">✕ Xóa tìm kiếm</button>
+                <span style="color:#7a8b9f;margin-left:auto;" id="recordCount">0 bản ghi</span>
+            </div>
+        </div>
+
+        <div class="card" style="padding:0;">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th onclick="sortBy('deviceName')" style="cursor:pointer;">TÊN THIẾT BỊ ↕</th>
+                            <th>NGƯỜI DÙNG</th>
+                            <th onclick="sortBy('action')" style="cursor:pointer;">HÀNH ĐỘNG ↕</th>
+                            <th onclick="sortBy('status')" style="cursor:pointer;">TRẠNG THÁI ↕</th>
+                            <th onclick="sortBy('executedAt')" style="cursor:pointer;">THỜI GIAN THỰC HIỆN ↕</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <tr><td colspan="6" style="text-align:center;color:#4a5a6a;">Đang tải...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <span id="paginationInfo">Hiển thị 0 bản ghi</span>
+            <div class="pagination-controls" id="paginationControls"></div>
+            <div class="page-size-selector">
+                <label for="pageSizeSelect">Hiển thị:</label>
+                <select id="pageSizeSelect" onchange="onPageSizeChange()">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+                <span>bản ghi/trang</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/copy-time.js"></script>
+    <script src="js/active-history.js"></script>
+</body>
+</html>

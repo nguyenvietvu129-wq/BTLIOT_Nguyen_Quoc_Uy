@@ -1,0 +1,127 @@
+@import url("base.css");
+
+/* ===== CARDS ===== */
+.card, .kpi-card, .search-section {
+    background: #ffffff;
+    padding: 20px 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 0;
+}
+.card:hover { border-color: #cbd5e1; }
+
+/* ===== KPI GRID ===== */
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0;
+    padding: 20px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: #2563eb;
+}
+.kpi-card:nth-child(2)::before { background: #dc2626; }
+.kpi-card:nth-child(3)::before { background: #f4b400; }
+.kpi-card:hover { transform: translateY(-2px); border-color: #cbd5e1; }
+.kpi-label { font-size: 12px; color: #4b5563; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.kpi-value { font-size: 30px; font-weight: 700; margin-top: 8px; color: #111827; }
+.kpi-unit { font-size: 14px; font-weight: 400; color: #4b5563; margin-left: 4px; }
+
+
+
+/* ===== DEVICE ITEMS ===== */
+.device-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+.device-item:last-child { border-bottom: 0; }
+.device-info { display: flex; flex-direction: column; gap: 4px; }
+.device-info .name { font-weight: 600; color: #111827; font-size: 14px; }
+.device-info .gpio { font-size: 12px; color: #6b7280; margin-top: 2px; }
+.device-status {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.device-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    font-size: 18px;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+.device-light.on {
+    background: #fff7db;
+    border-color: #f4b400;
+    box-shadow: 0 0 0 4px rgba(244,180,0,0.09);
+    color: #f4b400;
+}
+.device-light.off {
+    background: #f3f4f6;
+    color: #9ca3af;
+    filter: grayscale(1);
+}
+.switch {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    background: #d1d5db;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background 0.3s;
+}
+.switch.active { background: #2563eb; }
+.switch .knob {
+    position: absolute;
+    top: 3px; left: 3px;
+    width: 20px; height: 20px;
+    background: #ffffff;
+    transition: left 0.3s;
+    border-radius: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.switch.active .knob { left: 25px; }
+
+
+/* Dashboard chart card takes full width on first row */
+.dashboard-grid > .card h3 {
+    min-height: 24px;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+}
+.chart-wrap {
+    min-height: 300px;
+    position: relative;
+}
+
+/* Chart card accent */
+.dashboard-grid > .card:first-child {
+    border-top: 3px solid #2563eb;
+}
+
+/* Device control card */
+.dashboard-grid > .card:last-child {
+    border-top: 3px solid #f4b400;
+}
+
+/* KPI card colorful top borders cycle */
+.kpi-card:nth-child(3n+1)::before { background: #dc2626; }
+.kpi-card:nth-child(3n+2)::before { background: #2563eb; }
+.kpi-card:nth-child(3n+3)::before { background: #f4b400; }
